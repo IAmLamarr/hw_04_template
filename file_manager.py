@@ -73,12 +73,12 @@ obj - контакт (массив с данными)
 """
 
 
-def serialize(obj):
+def serialize(contact):
     pass
 
 
 """
-Функция превращения в строки в контакт (на умном - десериализация)
+Функция превращения строки в контакт (на умном - десериализация)
 
 obj_str - строка, содержащая данные контакта в формате
 <phone;first_name;last_name;patronymic;email;city;address>
@@ -86,5 +86,5 @@ obj_str - строка, содержащая данные контакта в ф
 """
 
 
-def deserialize(obj_str):
+def deserialize(contact_str):
     pass
