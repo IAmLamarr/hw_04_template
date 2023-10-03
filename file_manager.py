@@ -47,7 +47,7 @@ encoding_key_path - строка, путь к файлу с ключом шиф�
 
 
 def import_data(filename="data/export.phone", encoding_key_path="data/phone.key"):
-    entities = []
+    сontacts = []
 
     encoding_key = extract_encoding_key(encoding_key_path)
     text_bytes = open(filename, 'rb').read()
@@ -57,7 +57,7 @@ def import_data(filename="data/export.phone", encoding_key_path="data/phone.key"
 	- Декодировать байты в строку (см. crypt.py)
 	- Написать конвертацию строки в массив контактов (при помощи deserialize)
 	"""
-    return entities
+    return сontacts
 
 
 """
