@@ -18,14 +18,14 @@ def extract_encoding_key(filename):
 """
 Функция экспорта данных в формат .phone
 
-data - массив контактов
-encoding_key_path - строка, путь к файлу с ключом шифрования (.key)
-filename - строка, путь к файлу с файлу экспорта
+contacts - массив контактов
+encoding_key_path - строка, путь к файлу с ключом шифрования (по умолчанию - data/phone.key)
+filename - строка, путь к файлу экспорта (по умолчанию - data/export.phone)
 
 """
 
 
-def export_data(data, encoding_key_path, filename):
+def export_data(contacts, encoding_key_path="data/phone.key", filename="data/export.phone"):
     encoding_key = extract_encoding_key(encoding_key_path)
     export_string = ""
     """
@@ -39,14 +39,14 @@ def export_data(data, encoding_key_path, filename):
 """
 Функция импорта данных из формата .phone
 
-filename - строка, путь к файлу .phone
-encoding_key_path - строка, путь к файлу с ключом шифрования (.key)
+filename - строка, путь к файлу .phone (по умолчанию - data/export.phone)
+encoding_key_path - строка, путь к файлу с ключом шифрования (по умолчанию - data/phone.key)
 
 Необходимо вернуть массив контактов
 """
 
 
-def import_data(filename, encoding_key_path):
+def import_data(filename="data/export.phone", encoding_key_path="data/phone.key"):
     entities = []
 
     encoding_key = extract_encoding_key(encoding_key_path)
@@ -61,7 +61,7 @@ def import_data(filename, encoding_key_path):
 
 
 """
-Функция превращения контактов в строку (на умном - сериализация)
+Функция превращения контакта в строку (на умном - сериализация)
 
 obj - контакт (массив с данными)
 
